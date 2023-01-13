@@ -5,6 +5,7 @@ window.addEventListener("load", function(event){
   const q3Button = document.getElementById("q3button");
   const q4Button = document.getElementById("q4button");
   const q5Button = document.getElementById("q5button");
+  console.log("buttons set");
   const reset = document.getElementById("reset");
   const q1div = document.getElementById("divq1");
   const q2div = document.getElementById("divq2");
@@ -12,4 +13,10 @@ window.addEventListener("load", function(event){
   const q4div = document.getElementById("divq4");
   const q5div = document.getElementById("divq5");
   const answersdiv = document.getElementById("answersdiv");
+  console.log("divs set");
+  startButton.addEventListener("click", function() {
+
+  })
 });
+
+//input[name='((radio's name))']:checked
