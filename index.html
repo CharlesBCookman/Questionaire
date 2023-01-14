@@ -10,12 +10,15 @@
   <div>
     <h1 id="topheading">Coding Life Questionnaire</h1>
     <h3>Find the programing language that is right for you</h3>
-    <form id="nameinput">
-      <label for="name">Please enter your name here:</label>
-      <input id="name" type="text" name="input1" placeholder="Your name here">
-    </form><br>
-    <button id="startbutton">Start</button>
+    <div id="namesection">
+      <form id="nameinput">
+        <label for="name">Please enter your name here:</label>
+        <input id="name" type="text" name="input1" placeholder="Your name here">
+      </form><br>
+      <button id="startbutton">Start</button>
+    </div>
   </div>
+
   <div class="hidden" id="q1div">
     <h4>What level of experience do you have with computers and how they work?</h4>
     <form id="question1">
@@ -79,6 +82,11 @@
   <div class="hidden" id="answersdiv">
     <h4><span id="name-place"></span>, the programing language you should start with is <span id="answer-place"></span>.</h4><br>
     <button id="reset">Reset</button>
+  </div>
+  <div class="hidden">
+    <p id="python"></p>
+    <p id="javascript"></p>
+    <p id="c"></p>
   </div>
 </body>
 </html>
