@@ -5,11 +5,8 @@ function assessResult(result){
   for(let i = 0; i < result.length; i++){
     if(result.slice(i, (i + 1)) === "p"){
     p += 1 ;
-    console.log(p);
   } else if(result.slice(i, (i + 1) === "j")){
-    console.log(j);
   } else if (result.slice(i, (i + 1) === "c")){
-    console.log(c);
   }
 }
   if(p > j && p > c){
@@ -39,11 +36,6 @@ function removeHidden(){
   });
 }
 
-
-function resetPage() {
-
-}
-
 window.addEventListener("load", function(event) {
   event.preventDefault();
   const nameInput = document.getElementById("name");
@@ -67,5 +59,3 @@ window.addEventListener("load", function(event) {
     location.reload()
   };
 });
-
-//input[name='((radio's name))']:checked
