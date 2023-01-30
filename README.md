@@ -20,7 +20,7 @@ _This project is an assignment from my Epicodus class about designing a question
 
 * _You can find the repository for this project at https://github.com/CharlesBCookman/Questionaire -_
 * _You may clone from the repository to view in your own code editor_
-* _To view the gh-pages deplayment click here: _
+* _To view the gh-pages deplayment click here: https://charlesbcookman.github.io/Questionaire/ -_
 
 _If you have any troubles please contact me at CharlesBCookman@gmail.com_
 
