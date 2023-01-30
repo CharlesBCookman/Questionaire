@@ -7,8 +7,8 @@
   <script src="js/scripts.js"></script>
 </head>
 <body>
-  <div>
-    <h1 id="topheading">Coding Life Questionnaire</h1>
+  <div id="topheading">
+    <h1>Coding Life Questionnaire</h1>
     <h3>Find the programing language that is right for you</h3>
     <div id="namesection">
       <form id="nameinput">
@@ -18,63 +18,64 @@
       <button id="startbutton">Start</button>
     </div>
   </div>
-
-  <div class="hidden" class="hide" id="q1div">
-    <h4>What level of experience do you have with computers and how they work?</h4>
-    <form id="question1">
-      <input id="q1r1" type="radio" name="q1radio" value="p" checked>
-      <label for="q1r1">A little</label><br>
-      <input id="q1r2" type="radio" name="q1radio" value="j">
-      <label for="q1r2">Some</label><br>
-      <input id="q1r3" type="radio" name="q1radio" value="c">
-      <label for="q1r3">A lot</label><br><br>
+  <div id="questions-div" class="hidden">
+    <div id="q1div">
+      <h3>What level of experience do you have with computers and how they work?</h3>
+      <form id="question1">
+        <input id="q1r1" type="radio" name="q1radio" value="p" checked>
+        <label for="q1r1">A little</label><br>
+        <input id="q1r2" type="radio" name="q1radio" value="j">
+        <label for="q1r2">Some</label><br>
+        <input id="q1r3" type="radio" name="q1radio" value="c">
+        <label for="q1r3">A lot</label><br><br>
+    </div>
+    <div id="q2div">
+      <h3>Which do you prefer to solve:</h3>
+      <form id="question2">
+        <input id="q2r1" type="radio" name="q2radio" value="p" checked>
+        <label for="q2r1">Word problems</label><br>
+        <input id="q2r2" type="radio" name="q2radio" value="j">
+        <label for="q2r2">Logic problems</label><br>
+        <input id="q2r3" type="radio" name="q2radio" value="c">
+        <label for="q2r3">Math problems</label><br><br>
+    </div>
+    <div id="q3div">
+      <h3>What type of tools do you prefer?</h3>
+      <form id="question3">
+        <input id="q3r1" type="radio" name="q3radio" value="p" checked>
+        <label for="q3r1">Reliable tools that are more straight forward.</label><br>
+        <input id="q3r2" type="radio" name="q3radio" value="j">
+        <label for="q3r2">Multipurpose tools that can be used in many different ways.</label><br>
+        <input id="q3r3" type="radio" name="q3radio" value="c">
+        <label for="q3r3">Specific tools that may require additional knowlege but they do the job better.</label><br><br>
+      </form>
+    </div>
+    <div id="q4div">
+      <h3>What type of stuff do you want to build</h3>
+      <form id="question4">
+        <input id="q4r1" type="radio" name="q4radio" value="p" checked>
+        <label for="q4r1">Number and data cruching programs.</label><br>
+        <input id="q4r2" type="radio" name="q4radio" value="j">
+        <label for="q4r2">Interactive multifunctional programs.</label><br>
+        <input id="q4r3" type="radio" name="q4radio" value="c">
+        <label for="q4r3">Software and complex database interactivity.</label><br><br>
+      </form>
+    </div>
+    <div id="q5div">
+      <h3>When you learn things how much of a challege do you like to start with?</h3>
+      <form id="question5">
+        <input id="q5r1" type="radio" name="q5radio" value="p" checked>
+        <label for="q5r1">Start with a bit of a challege, and work up in difficulty.</label><br>
+        <input id="q5r2" type="radio" name="q5radio" value="j">
+        <label for="q5r2">Moderate difficulty to immerse yourself in the content.</label><br>
+        <input id="q5r3" type="radio" name="q5radio" value="c">
+        <label for="q5r3">As challegeing as possible.</label><br><br>
+        <button type="submit" id="q5button">Get Answer</button>
+      </form>
+    </div>
   </div>
-  <div class="hidden" class="hide" id="q2div">
-    <h4>Which do you prefer to solve:</h4>
-    <form id="question2">
-      <input id="q2r1" type="radio" name="q2radio" checked>
-      <label for="q2r1">Word problems</label><br>
-      <input id="q2r2" type="radio" name="q2radio">
-      <label for="q2r2">Logic problems</label><br>
-      <input id="q2r3" type="radio" name="q2radio">
-      <label for="q2r3">Math problems</label><br><br>
-  </div>
-  <div class="hidden" class="hide" id="q3div">
-    <h4>What type of tools do you prefer?</h4>
-    <form id="question3">
-      <input id="q3r1" type="radio" name="q3radio" checked>
-      <label for="q3r1">Reliable tools that are more straight forward.</label><br>
-      <input id="q3r2" type="radio" name="q3radio">
-      <label for="q3r2">Multipurpose tools that can be used in many different ways.</label><br>
-      <input id="q3r3" type="radio" name="q3radio">
-      <label for="q3r3">Specific tools that may require additional knowlege but they do the job better.</label><br><br>
-    </form>
-  </div>
-  <div class="hidden" class="hide" id="q4div">
-    <h4>What type of stuff do you want to build</h4>
-    <form id="question4">
-      <input id="q4r1" type="radio" name="q4radio" checked>
-      <label for="q4r1">Number and data cruching programs.</label><br>
-      <input id="q4r2" type="radio" name="q4radio">
-      <label for="q4r2">Interactive multifunctional programs.</label><br>
-      <input id="q4r3" type="radio" name="q4radio">
-      <label for="q4r3">Software and complex database interactivity.</label><br><br>
-    </form>
-  </div>
-  <div class="hidden" class="hide" id="q5div">
-    <h4>When you learn things how much of a challege do you like to start with?</h4>
-    <form id="question5">
-      <input id="q5r1" type="radio" name="q5radio" checked>
-      <label for="q5r1">Start with a bit of a challege, and work up in difficulty.</label><br>
-      <input id="q5r2" type="radio" name="q5radio">
-      <label for="q5r2">Moderate difficulty to immerse yourself in the content.</label><br>
-      <input id="q5r3" type="radio" name="q5radio">
-      <label for="q5r3">As challegeing as possible.</label><br><br>
-      <button id="q5button">Get Answer</button>
-    </form>
-  </div>
-  <div class="hidden-result" class="hide" id="answersdiv">
-    <h4><span id="name-place"></span>, the programing language you should start with is <span id="answer-place"></span>.</h4><br>
+  <div class="hidden-result" id="answersdiv">
+    <h2><span id="name-place"></span>, the programing language you should start with is <span id="answer-place"></span>.</h2><br>
     <button id="reset">Reset</button>
   </div>
 </body>

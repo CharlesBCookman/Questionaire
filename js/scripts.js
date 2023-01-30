@@ -1,38 +1,71 @@
-// function runEvaluation(p, j, c) {
-//   p = document.getElementById("python");
-//   j = document.getElementById("javascript");
-//   c = document.getElementById("c")
-// }
+function assessResult(result){
+  let p = 0;
+  let j = 0;
+  let c = 0;
+  for(let i = 0; i < result.length; i++){
+    if(result.slice(i, (i + 1)) === "p"){
+    p += 1 ;
+    console.log(p);
+  } else if(result.slice(i, (i + 1) === "j")){
+    console.log(j);
+  } else if (result.slice(i, (i + 1) === "c")){
+    console.log(c);
+  }
+}
+  if(p > j && p > c){
+    return "Python";
+  } else if (j >= p && j >= c){
+    return "Javascript";
+  } else if (c > j && c > p){
+    return "C#";
+  }
+}
+
+function collectResult(){
+  let results = "";
+  let result1 = document.querySelector('input[name="q1radio"]:checked').value;
+  let result2 = document.querySelector('input[name="q2radio"]:checked').value;
+  let result3 = document.querySelector('input[name="q3radio"]:checked').value;
+  let result4 = document.querySelector('input[name="q4radio"]:checked').value;
+  let result5 = document.querySelector('input[name="q5radio"]:checked').value;
+  results = (result1 + result2 + result3 + result4 + result5);
+  return results;
+}
 
 function removeHidden(){
   let allHidden = document.querySelectorAll(".hidden");
-  allHidden.classList.remove("hidden");
+  allHidden.forEach(element => {
+    element.classList.remove("hidden");
+  });
 }
 
-function getAnswer() {
-  const q5 = document.getElementById("q4div");
-  const answer = document.getElementById("q5div");
-  console.log("answer button triggering");
-  q5.classList.add("hidden");
-  answer.removeAttribute("class");
-}
 
 function resetPage() {
-  document.getElementById("answersdiv").classList.add("hidden");
-  document.getElementById("namesection").removeAttribute("class");
-  console.log("answer button triggering");
+
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function(event) {
+  event.preventDefault();
+  const nameInput = document.getElementById("name");
   const startButton = document.getElementById("startbutton");
   const q5Button = document.getElementById("q5button");
   const reset = document.getElementById("reset");
-  const q5div = document.getElementById("divq5");
   const answersdiv = document.getElementById("answersdiv");
+  const answerSpan = document.getElementById("answer-place");
+  const nameSpan = document.getElementById("name-place");
   console.log("divs set");
-
-  startButton.addEventListener("click", question1);
-  reset.addEventListener("click", resetPage);
+  startButton.addEventListener("click", removeHidden);
+  q5Button.onclick = function(event){
+    event.preventDefault();
+    answersdiv.classList.remove("hidden-result");
+    console.log(nameInput.value);
+    console.log(assessResult(collectResult));
+    nameSpan.innerText = nameInput.value;
+    answerSpan.innerText = assessResult(collectResult());
+  }
+  reset.onclick = function(){
+    location.reload()
+  };
 });
 
 //input[name='((radio's name))']:checked
